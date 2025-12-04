@@ -1,3 +1,6 @@
+import time
+
+inicio = time.time()
 import numpy as np
 
 dados = np.loadtxt("entrada.txt")
@@ -13,3 +16,6 @@ for k in range(N):
 # b = np.round(a, decimals=10)
 y = np.round(X, decimals=10)
 print(y)
+
+fim = time.time()
+print("Tempo:", fim - inicio, "segundos")
