@@ -1,3 +1,5 @@
+# funcao dft da numpy usada para confirmar os dados obtidos na nossa dft
+
 import numpy as np
 
 dados = np.loadtxt("entrada.txt")
