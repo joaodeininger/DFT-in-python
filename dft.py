@@ -3,10 +3,10 @@ import time  # biblioteca para medir o tempo de execução do código
 
 import numpy as np  # biblioteca para manipular arrays e realizar operações matemáticas mais avançadas
 
-dados = np.loadtxt(f"{input('Digite o nome do arquivo de entrada: ')}")  # carrega os dados do arquivo de entrada
+dados = np.loadtxt(f"entradas/{input('Digite o nome do arquivo de entrada: ')}")  # carrega os dados do arquivo de entrada
 N = dados.size  # tamanho da amostragem
 X = np.zeros(
-    N, dtype=complex
+    N, dtype=np.complex128
 )  # array pre-carregado com zeros para inserir os dados posteriormente
 tol = 1e-12  # valor de tolerância apenas usado para arredondar valores muito pequenos
 
@@ -24,7 +24,7 @@ y = np.round(
     X, decimals=10
 )  # arredonda os valores de X(k) quando são muito pequenos (os valores sempre ficam com resíduos pois o pi do programa é finito)
 
-np.savetxt(f"{input('Digite o nome do arquivo de saída: ')}", y, fmt='%.6f')  # salva X(k) no arquivo saida.txt
+np.savetxt(f"resultados/{input('Digite o nome do arquivo de saída: ')}", y, fmt='%.6f')  # salva X(k) no arquivo saida.txt
 print(y)
 
 
